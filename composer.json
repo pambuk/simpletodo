@@ -1,0 +1,17 @@
+{
+    "name": "Wojtek/zadanie",
+    "description": "ToDo",
+    "require": {
+        "symfony/filesystem": "~2.6",
+        "symfony/console": "~2.6"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    },
+    "authors": [
+        {
+            "name": "WZ",
+            "email": "wojciech.zymonik@polcode.pl"
+        }
+    ]
+}
