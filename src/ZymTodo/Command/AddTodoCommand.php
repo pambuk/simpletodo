@@ -29,12 +29,7 @@ class AddTodoCommand extends Command
         $tm = new TodoManager(new Filesystem());
         $item = new TodoItem($_item);
         $item->replaceDate();
-
-        $number = (count($tm->getItems()) > 0) ? count($tm->getItems()) : 1;
-
-        $f = \fopen('storage/'. TodoManager::ITEMS, 'a');
-        \fputs($f, $number .'. '. \trim($item->render()) ."\n");
-        \fclose($f);
+        $tm->saveItem($item);
 
         $output->writeln('Item added');
     }
