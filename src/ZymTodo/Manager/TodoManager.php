@@ -91,6 +91,21 @@ class TodoManager
         fclose($f);
     }
     
+    /**
+     * @todo would be better to simply have save() method
+     * 
+     * @param \ZymTodo\Manager\TodoItem $item
+     */
+    public function saveItem(TodoItem $item)
+    {
+        $count  = count($this->getItems());
+        $number = ($count > 0) ? $count : 1;
+        
+        $f = \fopen('storage/'. self::ITEMS, 'a');
+        \fputs($f, $number .'. '. \trim($item->render()) ."\n");
+        \fclose($f);
+    }
+    
     protected function save(TodoCollection $items)
     {
         $f = fopen('storage/'. self::ITEMS, 'w');

@@ -1,1 +1,2 @@
 2. Third item
+4. Move adding to manager @2015-02-19

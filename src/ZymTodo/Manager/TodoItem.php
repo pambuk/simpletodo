@@ -10,6 +10,7 @@ class TodoItem
     public function __construct($data)
     {
         $this->data = $data;
+        $this->replaceDate();
     }
     
     public function render()
