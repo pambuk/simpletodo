@@ -1,4 +1,0 @@
-1. First item
-2. dummy
-3. Test todo with date and hash #test @2015-02-19
-4. date test @2015-02-23
