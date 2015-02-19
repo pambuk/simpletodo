@@ -25,10 +25,9 @@ class AddTodoCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $_item = $input->getArgument('todo');
-        $tm = new TodoManager(new Filesystem());
-        $item = new TodoItem($_item);
-        $item->replaceDate();
+        $_item  = $input->getArgument('todo');
+        $tm     = new TodoManager(new Filesystem());
+        $item   = new TodoItem($_item);
         $tm->saveItem($item);
 
         $output->writeln('Item added');
