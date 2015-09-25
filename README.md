@@ -1,4 +1,4 @@
-# zadanie1-todo
+# SimpleTodo
 Console todo app
 
 t:list
